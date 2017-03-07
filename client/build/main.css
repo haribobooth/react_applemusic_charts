@@ -1,0 +1,133 @@
+body{
+  font-family: Verdana;
+  text-align: center;
+}
+
+hr {
+  border: 1px solid #DFDFDF;
+}
+
+a {
+  text-decoration: none;
+  color: #136CB2;
+}
+
+p {
+  color: #136CB2;
+}
+
+#title {
+  color: black;
+  margin-top: 5px
+}
+
+.counter-box, .comment-box{
+  border: 2px solid mediumaquamarine;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px auto;
+  width: 400px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.song-container {
+  border: 2px solid #DFDFDF;
+  width: 100%;
+  margin: 0 auto;
+  padding: 5px;
+  text-align: left;
+  background-color: #F1F1F1;
+}
+
+.song-container a {
+  font-size: 0.8em
+}
+
+.song-list {
+  width: 99%;
+  text-align: left
+}
+
+.song {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 99%;
+}
+
+.song img {
+  vertical-align: middle;
+  height: 1.5em;
+  margin-right: 15px;
+}
+
+.song * {
+  display: inline;
+}
+
+.song p {
+
+}
+
+.song p:hover {
+  cursor: pointer;
+}
+
+#separating-hr {
+  margin-top: 20px
+}
+
+button{
+  color: white;
+  padding: 10px;
+  width: 98%;
+  height: 3.5em;
+  border: none;
+  border-radius: 0px;
+  font-size: 0.9em;
+  background-color: #136CB2;
+  display: block;
+  margin: 0px auto;
+  margin-top: 5px
+}
+
+button:hover{
+  background-color: #035CA2;
+  cursor: pointer;
+}
+
+button:active{
+  background-color: #136CB2;
+}
+
+.comment{
+  border-bottom: 1px solid mediumaquamarine;
+  padding: 10px;
+}
+
+.comment-form{
+  margin: 0 auto;
+  width: 70%;
+}
+
+.comment-form input{
+  display: block;
+  margin: 20px 0;
+  padding: 10px;
+  width: 100%;
+}
+
+.comment-form input[type=submit]{
+  width: 100%;
+  padding: 10px;
+  margin 20px auto;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  background-color: mediumaquamarine;
+  border-radius: 5px;
+}
+
+.countries-box{
+
+}
