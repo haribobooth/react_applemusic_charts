@@ -1,16 +1,15 @@
 var React = require('react');
 
-var Song = React.createClass({
-  render: function(){
+var Song = function(props){
     return (
       <div className="song">
-        <img src={(this.props.song['im:image'][0]['label'])}/>
-        <p>{(this.props.song['im:name']['label'])}</p>
-        <p> - </p>
-        <p>{(this.props.song['im:collection']['im:name']['label'])}</p>
+        <p>{props.position}. </p>
+        <img src={(props.song['im:image'][0]['label'])}/>
+        <p>{(props.song['im:name']['label'])}</p>
+        <p> - by </p>
+        <p>{(props.song['im:artist']['label'])}</p>
       </div>
     );
-  },
-});
+};
 
 module.exports = Song;

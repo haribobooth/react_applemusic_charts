@@ -5,7 +5,7 @@ var SongList = React.createClass({
   render: function(){
 
     var songNodes = this.props.songs.map(function(song, index){
-      return <Song key={index} song={song} />
+      return <Song key={index} position={index + 1} song={song} />
     });
 
     return (

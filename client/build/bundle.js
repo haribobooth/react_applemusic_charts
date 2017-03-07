@@ -21754,32 +21754,34 @@ window.onload = function () {
 
 var React = __webpack_require__(20);
 
-var Song = React.createClass({
-  displayName: 'Song',
-
-  render: function render() {
-    return React.createElement(
-      'div',
-      { className: 'song' },
-      React.createElement('img', { src: this.props.song['im:image'][0]['label'] }),
-      React.createElement(
-        'p',
-        null,
-        this.props.song['im:name']['label']
-      ),
-      React.createElement(
-        'p',
-        null,
-        ' - '
-      ),
-      React.createElement(
-        'p',
-        null,
-        this.props.song['im:collection']['im:name']['label']
-      )
-    );
-  }
-});
+var Song = function Song(props) {
+  return React.createElement(
+    'div',
+    { className: 'song' },
+    React.createElement(
+      'p',
+      null,
+      props.position,
+      '. '
+    ),
+    React.createElement('img', { src: props.song['im:image'][0]['label'] }),
+    React.createElement(
+      'p',
+      null,
+      props.song['im:name']['label']
+    ),
+    React.createElement(
+      'p',
+      null,
+      ' - by '
+    ),
+    React.createElement(
+      'p',
+      null,
+      props.song['im:artist']['label']
+    )
+  );
+};
 
 module.exports = Song;
 
@@ -21799,7 +21801,7 @@ var SongList = React.createClass({
   render: function render() {
 
     var songNodes = this.props.songs.map(function (song, index) {
-      return React.createElement(Song, { key: index, song: song });
+      return React.createElement(Song, { key: index, position: index + 1, song: song });
     });
 
     return React.createElement(
