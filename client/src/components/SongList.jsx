@@ -1,10 +1,10 @@
-var React = require('react');
-var Song = require('./Song.jsx');
+import React from 'react';
+import Song from './Song.jsx'
 
-var SongList = React.createClass({
+const SongList = React.createClass({
   render: function(){
 
-    var songNodes = this.props.songs.map(function(song, index){
+    const songNodes = this.props.songs.map(function(song, index){
       return <Song key={index} position={index + 1} song={song} />
     });
 
@@ -16,4 +16,4 @@ var SongList = React.createClass({
   },
 });
 
-module.exports = SongList;
+export default SongList;

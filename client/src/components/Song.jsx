@@ -1,6 +1,6 @@
-var React = require('react');
+import React from 'react';
 
-var Song = function(props){
+const Song = function(props){
     return (
       <div className="song">
         <p>{props.position}. </p>
@@ -12,4 +12,4 @@ var Song = function(props){
     );
 };
 
-module.exports = Song;
+export default Song;

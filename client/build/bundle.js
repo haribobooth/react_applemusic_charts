@@ -9443,10 +9443,21 @@ module.exports = ReactPropTypesSecret;
 "use strict";
 
 
-var React = __webpack_require__(25);
-var SongList = __webpack_require__(83);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
-var SongContainer = React.createClass({
+var _react = __webpack_require__(25);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _SongList = __webpack_require__(83);
+
+var _SongList2 = _interopRequireDefault(_SongList);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var SongContainer = _react2.default.createClass({
   displayName: 'SongContainer',
 
   getInitialState: function getInitialState() {
@@ -9472,20 +9483,20 @@ var SongContainer = React.createClass({
   },
 
   render: function render() {
-    return React.createElement(
+    return _react2.default.createElement(
       'div',
       { className: 'song-container' },
-      React.createElement(
+      _react2.default.createElement(
         'p',
         { id: 'title' },
         'UK Top 20'
       ),
-      React.createElement(SongList, { songs: this.state.songs })
+      _react2.default.createElement(_SongList2.default, { songs: this.state.songs })
     );
   }
 });
 
-module.exports = SongContainer;
+exports.default = SongContainer;
 
 /***/ }),
 /* 81 */
@@ -9504,30 +9515,38 @@ module.exports = __webpack_require__(111);
 "use strict";
 
 
-var React = __webpack_require__(25);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(25);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Song = function Song(props) {
-  return React.createElement(
+  return _react2.default.createElement(
     'div',
     { className: 'song' },
-    React.createElement(
+    _react2.default.createElement(
       'p',
       null,
       props.position,
       '. '
     ),
-    React.createElement('img', { src: props.song['im:image'][0]['label'] }),
-    React.createElement(
+    _react2.default.createElement('img', { src: props.song['im:image'][0]['label'] }),
+    _react2.default.createElement(
       'p',
       null,
       props.song['im:name']['label']
     ),
-    React.createElement(
+    _react2.default.createElement(
       'p',
       null,
       ' - by '
     ),
-    React.createElement(
+    _react2.default.createElement(
       'p',
       null,
       props.song['im:artist']['label']
@@ -9535,7 +9554,7 @@ var Song = function Song(props) {
   );
 };
 
-module.exports = Song;
+exports.default = Song;
 
 /***/ }),
 /* 83 */
@@ -9544,19 +9563,30 @@ module.exports = Song;
 "use strict";
 
 
-var React = __webpack_require__(25);
-var Song = __webpack_require__(82);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
-var SongList = React.createClass({
+var _react = __webpack_require__(25);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Song = __webpack_require__(82);
+
+var _Song2 = _interopRequireDefault(_Song);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var SongList = _react2.default.createClass({
   displayName: 'SongList',
 
   render: function render() {
 
     var songNodes = this.props.songs.map(function (song, index) {
-      return React.createElement(Song, { key: index, position: index + 1, song: song });
+      return _react2.default.createElement(_Song2.default, { key: index, position: index + 1, song: song });
     });
 
-    return React.createElement(
+    return _react2.default.createElement(
       'div',
       { className: 'song-list' },
       songNodes
@@ -9564,7 +9594,7 @@ var SongList = React.createClass({
   }
 });
 
-module.exports = SongList;
+exports.default = SongList;
 
 /***/ }),
 /* 84 */
@@ -21803,12 +21833,22 @@ module.exports = traverseAllChildren;
 "use strict";
 
 
-var React = __webpack_require__(25);
-var ReactDOM = __webpack_require__(81);
-var SongContainer = __webpack_require__(80);
+var _react = __webpack_require__(25);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(81);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _SongContainer = __webpack_require__(80);
+
+var _SongContainer2 = _interopRequireDefault(_SongContainer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 window.onload = function () {
-  ReactDOM.render(React.createElement(SongContainer, null), document.getElementById('app'));
+  _reactDom2.default.render(_react2.default.createElement(_SongContainer2.default, null), document.getElementById('app'));
 };
 
 /***/ })

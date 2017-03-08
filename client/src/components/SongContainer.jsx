@@ -1,19 +1,19 @@
-var React = require('react');
-var SongList = require('./SongList.jsx');
+import React from 'react';
+import SongList from './SongList.jsx';
 
-var SongContainer = React.createClass({
+const SongContainer = React.createClass({
   getInitialState: function(){
     return {songs: []};
   },
 
   getSongs: function(){
-    var url = 'https://itunes.apple.com/gb/rss/topsongs/limit=20/json';
-    var request = new XMLHttpRequest();
+    const url = 'https://itunes.apple.com/gb/rss/topsongs/limit=20/json';
+    const request = new XMLHttpRequest();
     request.open('GET', url);
 
     request.onload = function(){
-      var responseData = JSON.parse(request.responseText);
-      var entryList = responseData.feed.entry;
+      const responseData = JSON.parse(request.responseText);
+      const entryList = responseData.feed.entry;
       this.setState({songs: entryList});
     }.bind(this);
 
@@ -34,4 +34,4 @@ var SongContainer = React.createClass({
   },
 });
 
-module.exports = SongContainer;
+export default SongContainer;

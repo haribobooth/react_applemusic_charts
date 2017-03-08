@@ -1,6 +1,6 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var SongContainer = require('./components/SongContainer.jsx');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import SongContainer from './components/SongContainer.jsx';
 
 window.onload = function(){
   ReactDOM.render(
