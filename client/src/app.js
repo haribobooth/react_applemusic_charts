@@ -1,10 +1,10 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var FilmContainer = require('./components/FilmContainer.jsx');
+var SongContainer = require('./components/SongContainer.jsx');
 
 window.onload = function(){
   ReactDOM.render(
-    <FilmContainer />,
+    <SongContainer />,
     document.getElementById('app')
   );
 }
