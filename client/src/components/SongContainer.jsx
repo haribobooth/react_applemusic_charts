@@ -11,11 +11,11 @@ const SongContainer = React.createClass({
     const request = new XMLHttpRequest();
     request.open('GET', url);
 
-    request.onload = function(){
+    request.onload = () => {
       const responseData = JSON.parse(request.responseText);
       const entryList = responseData.feed.entry;
       this.setState({songs: entryList});
-    }.bind(this);
+    };
 
     request.send();
   },
